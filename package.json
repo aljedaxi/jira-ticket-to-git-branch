@@ -7,12 +7,19 @@
   "author": "daxi <aljedaxi@gmail.com>",
   "license": "GPLv3",
   "private": false,
+	"scripts": {
+		"test": "jest"
+	},
   "dependencies": {
     "funfix": "^7.0.1",
     "isomorphic-unfetch": "^3.0.0",
     "js-yaml": "^3.14.0",
     "prompts": "^2.3.2",
     "ramda": "^0.27.0",
-    "rss-parser": "^3.8.0"
+    "rss-parser": "^3.8.0",
+    "sanctuary": "^3.1.0"
+  },
+  "devDependencies": {
+    "jest": "^26.4.0"
   }
 }
