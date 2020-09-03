@@ -48,7 +48,7 @@ const formatAsGitCommand = ({ localDevelopBranch, remoteRepo, remoteDevelopBranc
 
 const getDescription = pipe([
 	splitOn(' '),
-	sa => sa[0] === '' ? Nothing : Just (tail (sa)),
+	sa => sa[0] === '' ? Nothing : tail (sa),
 	maybe (DEFAULT_DESCRIPTION) (pipe([
 		join(' '),
 		removeInvalidCharacters, 
