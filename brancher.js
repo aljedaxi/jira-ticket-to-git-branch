@@ -9,7 +9,7 @@ const {
 const { splitDoThingRejoin } = require('./util');
 
 const spaceToHyphen = compose (join('-')) (splitOn(' '));
-const removeInvalidCharacters = replace(/[:~^\\]+/, '');
+const removeInvalidCharacters = pipe([ replace(/[:~^\\]+/g, ''), replace(/"/g, '\\"'), replace(/'/g, "\\'") ]);
 const deSquare = compose (join('')) (without(['[', ']']));
 
 const DEFAULT_TICKET = 'XD-33';
